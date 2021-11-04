@@ -1,6 +1,7 @@
 Names:
 Marco Bozic (500896651)
 Tiago Ribeiro (500893964)
+Ernesto Siciliano(500876530)
 
 
 # Getting Started with Create React App

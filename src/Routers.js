@@ -4,7 +4,11 @@ import Tutorial from "./components/Tutorial.js"
 import Finance from "./components/Finance.js"
 import About from "./components/About.js"
 import './Routers.css';
+
+// Icons
 import companyLogo from './media/logo_white.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faChartLine, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 // Add new components here 
 
@@ -16,29 +20,31 @@ import {
 } from "react-router-dom";
 
 function Routers() {
+  
   return (
     <div>
       <Router>
-      <nav className="bd-navbar navbar is-info">
+      <nav className="bd-navbar navbar is-link is-spaced has-shadow">
         <div className="navbar-brand is-flex-grow-0">
-          <Link className="navbar-item" to="/">
-            <img src={companyLogo} alt="RyeFinance" width="100%" height="25"/>
+          <Link className="navbar-item mr-5" to="/">
+            <img src={companyLogo} alt="RyeFinance"/>
           </Link>
+          <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"  data-target="mainNav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </div>
         </div>
-        <div className="navbar-menu">
+        <div id="mainNav" className="navbar-menu">
           <div className="navbar-start has-text-weight-semibold">
-            <Link className="navbar-item" to="/">Home</Link>
-            <Link className="navbar-item" to="/tutorial">Tutorial</Link>
-            <Link className="navbar-item" to="/finance">Finance</Link>
-            <Link className="navbar-item" to="/about">About</Link>
+            <Link className="navbar-item mr-1" to="/"><FontAwesomeIcon icon={faHome} />&nbsp;Home</Link>
+            <Link className="navbar-item mr-1" to="/tutorial"><FontAwesomeIcon icon={faGraduationCap} />&nbsp;Tutorial</Link>
+            <Link className="navbar-item mr-1" to="/finance"><FontAwesomeIcon icon={faChartLine} />&nbsp;Finance</Link>
+            <Link className="navbar-item mr-1" to="/about">About</Link>
             {/* Add new links here */}
           </div>
           <div className="navbar-end">
-            <a href="/#" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
+            
           </div>
         </div>
       </nav>

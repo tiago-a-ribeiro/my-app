@@ -18,18 +18,24 @@ class Finance extends Component {
     render() {
       return (
         <div>
-          <h1>Finance Page</h1>
-          <table class="table">
-          <tr>
-          <th>Name</th>
-          <th>Net Worth</th>
-          </tr>
-          <tr>
-          {this.state.data.map(data => <div>
-          
-          <td>{data.person.name}</td><td>{data.finalWorth}</td></div>)}
-            </tr>
-          </table>
+          <h1 class="p-2 is-size-3 has-text-weight-bold">Finance Page</h1>
+          <div class="table-container p-5">
+            <table class="table is-hoverable">
+              <thead class="has-background-light">
+                <tr>
+                  <th>Name</th>
+                  <th>Net Worth</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.data.map(data => 
+                  <tr>
+                    <td>{data.person.name}</td><td>{data.finalWorth}</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }

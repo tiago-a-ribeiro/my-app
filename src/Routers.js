@@ -2,7 +2,9 @@ import React from "react";
 import Home from "./components/Home.js"
 import Finance from "./components/Finance.js"
 import About from "./components/About.js"
-import './index.css';
+import './Routers.css';
+import companyLogo from './media/logo_white.png';
+
 // Add new components here 
 
 import {
@@ -16,11 +18,23 @@ function Routers() {
   return (
     <div>
       <Router>
-      <nav>
-        <p><Link to="/">Home</Link></p>
-        <p><Link to="/finance">Finance</Link></p>
-        <p><Link to="/about">About</Link></p>
-        {/* Add new links here */}
+      <nav className="navbar is-info">
+        <div className="navbar-brand is-flex-grow-0">
+          <Link className="navbar-item" to="/">
+            <img src={companyLogo} alt="RyeFinance" width="100%" height="25"/>
+          </Link>
+        </div>
+        <div className="navbar-menu">
+          <div className="navbar-start has-text-weight-semibold">
+            <Link className="navbar-item" to="/">Home</Link>
+            <Link className="navbar-item" to="/finance">Finance</Link>
+            <Link className="navbar-item" to="/about">About</Link>
+            {/* Add new links here */}
+          </div>
+          <div className="navbar-end">
+
+          </div>
+        </div>
       </nav>
       
       <div>

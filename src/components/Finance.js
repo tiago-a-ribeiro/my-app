@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './Finance.css';
 
 class Finance extends Component {
 
@@ -18,7 +19,17 @@ class Finance extends Component {
       return (
         <div>
           <h1>Finance Page</h1>
-          {this.state.data.map(data => <h3>{data.uri}</h3>)}
+          <table class="table">
+          <tr>
+          <th>Name</th>
+          <th>Net Worth</th>
+          </tr>
+          <tr>
+          {this.state.data.map(data => <div>
+          
+          <td>{data.person.name}</td><td>{data.finalWorth}</td></div>)}
+            </tr>
+          </table>
         </div>
       );
     }

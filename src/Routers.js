@@ -20,7 +20,7 @@ import {
 } from "react-router-dom";
 
 function Routers() {
-  
+  const [isActive, setisActive] = React.useState(false);
   return (
     <div>
       <Router>
@@ -29,13 +29,15 @@ function Routers() {
           <Link className="navbar-item mr-5" to="/">
             <img src={companyLogo} alt="RyeFinance"/>
           </Link>
-          <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"  data-target="mainNav">
+          <div onClick={() => {
+              setisActive(!isActive);
+            }} role="button" className={`navbar-burger burger ${isActive ? "is-active" : ""}`} aria-label="menu" aria-expanded="false"  data-target="mainNav">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </div>
         </div>
-        <div id="mainNav" className="navbar-menu">
+        <div id="mainNav" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
           <div className="navbar-start has-text-weight-semibold">
             <Link className="navbar-item mr-1" to="/"><FontAwesomeIcon icon={faHome} />&nbsp;Home</Link>
             <Link className="navbar-item mr-1" to="/tutorial"><FontAwesomeIcon icon={faGraduationCap} />&nbsp;Tutorial</Link>

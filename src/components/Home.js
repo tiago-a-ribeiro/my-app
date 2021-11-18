@@ -4,6 +4,13 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 import './Home.css';
 import reactLogo from '../media/react.png';
 
+/*
+Page 1. A summary snapshot presentation of the chosen FRONTEND Framework: 
+Popularity, strengths, weaknesses, which developers mostly use it and for what kind of websites.
+
+A summary snapshot presentation of the chosen BACKEND Framework: 
+Popularity, strengths, weaknesses, which developers mostly use it and for what kind of websites.
+*/ 
 class Home extends Component {
   render() {
     return (

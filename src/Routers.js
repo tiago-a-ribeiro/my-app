@@ -1,14 +1,23 @@
 import React from "react";
 import Home from "./components/Home.js"
 import Tutorial from "./components/Tutorial.js"
+import Styling from "./components/Styling.js"
 import Finance from "./components/Finance.js"
+import Review from "./components/Review.js"
 import About from "./components/About.js"
 import './Routers.css';
 
 // Icons
 import companyLogo from './media/logo_white.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faChartLine, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { 
+  faHome, 
+  faChartLine, 
+  faGraduationCap, 
+  faPalette,
+  faPen,
+  faUser
+} from '@fortawesome/free-solid-svg-icons'
 
 // Add new components here 
 
@@ -41,8 +50,10 @@ function Routers() {
           <div className="navbar-start has-text-weight-semibold">
             <Link className="navbar-item mr-1" to="/"><FontAwesomeIcon icon={faHome} />&nbsp;Home</Link>
             <Link className="navbar-item mr-1" to="/tutorial"><FontAwesomeIcon icon={faGraduationCap} />&nbsp;Tutorial</Link>
+            <Link className="navbar-item mr-1" to="/styling"><FontAwesomeIcon icon={faPalette} />&nbsp;Styling</Link>
+            <Link className="navbar-item mr-1" to="/review"><FontAwesomeIcon icon={faPen} />&nbsp;Review</Link>
             <Link className="navbar-item mr-1" to="/finance"><FontAwesomeIcon icon={faChartLine} />&nbsp;Finance</Link>
-            <Link className="navbar-item mr-1" to="/about">About</Link>
+            <Link className="navbar-item mr-1" to="/about"><FontAwesomeIcon icon={faUser} />&nbsp;About</Link>
             {/* Add new links here */}
           </div>
           <div className="navbar-end">
@@ -55,7 +66,9 @@ function Routers() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/tutorial" component={Tutorial} />
+          <Route path="/styling" component={Styling} />
           <Route path="/finance" component={Finance} />
+          <Route path="/review" component={Review} />
           <Route path="/about" component={About} />
           {/* Add paths here, link components (top of this file) */}
         </Switch>

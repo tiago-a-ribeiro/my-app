@@ -25,18 +25,31 @@ class Finance extends Component {
               <thead class="has-background-light">
                 <tr>
                   <th> </th>
+                  <th>Rank </th>
                   <th>Name</th>
-                  <th>Net Worth</th>
+                  <th>Live Net Worth</th>
+                  <th>Previous Day Net Worth</th>
+                  <th>Change Compared to Previous Day</th>
+                  <th>Private Assets Worth</th>
                   <th>Source</th>
+                  <th>Country of Residence</th>
+                  
                 </tr>
               </thead>
               <tbody>
                 {this.state.data.map(data => 
                   <tr>
-                    <td><img src={data.person.squareImage}></img></td>
+                    <td><img src={data.person.squareImage} width="150" height="150"></img></td>
+                    <td>{data.rank}</td>
                     <td>{data.person.name}</td>
-                    <td>${data.finalWorth}*2</td>
+                    <td>${(data.finalWorth*1000000).toLocaleString()}</td>
+                    <td>${(data.estWorthPrev*1000000).toLocaleString()}</td>
+                    <td>${((data.finalWorth*1000000)-(data.estWorthPrev*1000000)).toLocaleString()}</td>
+                    <td>${(data.privateAssetsWorth*1000000).toLocaleString()}</td>
                     <td>{data.source}</td>
+                    <td>{data.countryOfCitizenship}</td>
+                    
+                    
                   </tr>
                 )}
               </tbody>

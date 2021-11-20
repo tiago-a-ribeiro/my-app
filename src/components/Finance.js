@@ -28,17 +28,15 @@ class Finance extends Component {
                   <th>Name</th>
                   <th>Net Worth</th>
                   <th>Source</th>
-                  <th>Last row</th>
                 </tr>
               </thead>
               <tbody>
                 {this.state.data.map(data => 
                   <tr>
-                    <td><img src="{data.person.squareImage}"></img></td>
+                    <td><img src={data.person.squareImage}></img></td>
                     <td>{data.person.name}</td>
                     <td>${data.finalWorth}*2</td>
                     <td>{data.source}</td>
-                    <td><img src="https://specials-images.forbesimg.com/imageserve/5f47d4de7637290765bce495/416x416.jpg?background=000000&cropX1=1699&cropX2=3845&cropY1=559&cropY2=2704"></img></td>
                   </tr>
                 )}
               </tbody>

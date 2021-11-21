@@ -2,6 +2,17 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import './Finance.css';
 
+function NetWorthChange(props) {
+  const difference = ((props.final*1000000)-(props.prev*1000000));
+  var colorTag = "has-text-grey-light";
+  if (difference > 0) {
+    colorTag = "has-text-success"
+  } else if (difference < 0) {
+    colorTag = "has-text-danger"
+  }
+  return <td class={colorTag}>${difference.toLocaleString()}</td>;
+}
+
 class Finance extends Component {
 
     constructor(props){
@@ -44,7 +55,7 @@ class Finance extends Component {
                     <td>{data.person.name}</td>
                     <td>${(data.finalWorth*1000000).toLocaleString()}</td>
                     <td>${(data.estWorthPrev*1000000).toLocaleString()}</td>
-                    <td>${((data.finalWorth*1000000)-(data.estWorthPrev*1000000)).toLocaleString()}</td>
+                    <NetWorthChange final={data.finalWorth} prev={data.estWorthPrev}/>
                     <td>${(data.privateAssetsWorth*1000000).toLocaleString()}</td>
                     <td>{data.source}</td>
                     <td>{data.countryOfCitizenship}</td>

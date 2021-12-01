@@ -74,12 +74,28 @@ class Home extends Component {
                 <div className = "title has-text-centered py-5">
                   <p>Advantages:</p>
                 </div>
+                <div className = "content is-medium">
+                  <ul>
+                    <li>Easy to Learn</li>
+                    <li>Virtual DOM</li>
+                    <li>Reusable Components</li>
+                    <li>One-Way Data Flow</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className = "tile is-4 is-vertical">
               <div className = "tile is-child box">
                 <div className = "title has-text-centered py-5">
                   <p>Disdvantages:</p>
+                </div>
+                <div className = "content is-medium">
+                  <ul>
+                    <li>JSX Complication</li>
+                    <li>Slow Development Pace</li>
+                    <li>Poor Documentation</li>
+                    <li>No Mobile Implementation</li>
+                  </ul>
                 </div>
               </div>
             </div>

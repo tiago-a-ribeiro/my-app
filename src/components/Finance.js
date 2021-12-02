@@ -14,6 +14,10 @@ function NetWorthChange(props) {
   return <td class={colorTag}>${difference.toLocaleString()}</td>;
 }
 
+
+
+
+
 function sortTableByColumn(table, column, asc = true){
   const dirModifier = asc ? 1 : -1;
   const tBody = table.tBodies[0];
@@ -59,7 +63,7 @@ const columns = [
 },
 {
   name: 'Change Compared to Previous Day',
-  selector: row => row.yesterdayWorth,
+  selector: row => row.change,
   sortable: true,
 },
 {
@@ -91,8 +95,6 @@ function MyComponent(props) {
       name:(props.apiData[i].person.name),
       netWorth:((props.apiData[i].finalWorth*1000000).toLocaleString()),
       yesterdayWorth:((props.apiData[i].estWorthPrev*1000000).toLocaleString()),
-      //<NetWorthChange final={data.finalWorth} prev={data.estWorthPrev}/>
-      //change:(((props.apiData[i].finalWorth)-(props.apiData[i].estWorthPrev)).toLocaleString()),
       change:(<NetWorthChange final={props.apiData[i].finalWorth} prev={props.apiData[i].estWorthPrev}/>),
       privateWorth:((props.apiData[i].privateAssetsWorth*1000000).toLocaleString()),
       source:(props.apiData[i].source),

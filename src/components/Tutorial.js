@@ -10,6 +10,7 @@ import {
 import tut0 from '../media/tutorial_step0.png';
 import tut1 from '../media/tutorial_step1.png';
 import tut2 from '../media/tutorial_step2.png';
+import cmdPic from '../media/command.png';
 import tut3 from '../media/tutorial_step3.png';
 
 
@@ -36,19 +37,39 @@ class Tutorial extends Component {
             will go over how to install other tools, libraries and API's we used in this application.
           </p>
           <div className="tile is-ancestor py-5">
-            <div className="tile">
-              <div className="tile is-parent is-vertical">
-                <article className="tile is-child notification is-primary">
+            <div className="tile is-vertical">
+              <div className="tile is-parent is-vertical mx-3">
+                <article className="tile is-child notification is-primary has-text-centered	">
                   <p className="title mb-3">1) Install Locally</p>
                   <hr className="my-2" />
                   <p className="is-size-5">
                     The React front-end runs on top of NodeJS, we have to install that first.
                     Download the <a href="https://nodejs.org/en/download/" target="_blank" rel="noreferrer">NodeJS<FontAwesomeIcon icon={faExternalLinkAlt} transform="shrink-5" /></a> installer for your system and follow the instructions
                   </p>
+                  <br/>
+                  <p className="is-size-5">
+                    After installing NodeJS you need to open up a terminal and create a base ReactJS application.
+                  </p>
+                  <br/>
+                  <p className="is-size-5">
+                    To create a new react application you need to make use of the npx command, this is a package execution program that comes with npm (Node package manager), and npm comes with NodeJS.
+                    <br />
+                    <b>Type the three commands seen below, it will create the React application</b>
+                  </p>
+                  <br/>
+                  <img src={cmdPic} alt="commandRef"/>
+                  <br/><br/>
+                  <p className="is-size-5">
+                    After typing <b>npm start</b> the web app will run locally in the terminal and should be accessible through <a href="http://localhost:3000">http://localhost:3000</a>  
+                  </p>
+                  <br/>
+                  <p className="is-size-5">
+                    One of the best things about ReactJS is just how easy it is to setup a new project and get started! Look to the next part to see how you can host a ReactJS with Digital Ocean.
+                  </p>
                 </article>
               </div>
-              <div className="tile is-parent">
-                <article className="tile is-child notification is-info">
+              <div className="tile is-parent mx-3">
+                <article className="tile is-child notification is-info has-text-centered">
                   <p className="title mb-3">2) Hosting Setup</p>
                   <hr className="my-2" />
                   <p className="subtitle">
@@ -56,7 +77,7 @@ class Tutorial extends Component {
                     has an option to host a Web Application live from a repository. This took a lot of work
                     out of our hands because we do not need to manage a server. We have the steps below for setting up a Web App with Digital Ocean. 
                   </p>
-                  <br/><br/>
+                  <br/>
                   <p className="subtitle">
                     1) First you want to select the "Deploy your source code on App Platform" option.
                   </p>
@@ -68,17 +89,14 @@ class Tutorial extends Component {
                   <img src={tut1} alt="RyeFinance"/>
                   <br/><br/>
                   <p className="subtitle">
-                    3) Afterwards, there are more configuration options, but the most important to point out is the type of site.
-                    In our case we decided to use a static site as there isn't any need for our website to be a web service (write why maybe?).
+                    3) Afterwards, there are more configuration options, but the most important to point out is the type of site.<br />
+                    In our case we decided to use a static site as there isn't any need for our website to be a web service as we aren't receiving data from the user.
                   </p>
                   <img src={tut2} alt="RyeFinance"/>
-                </article>
-              </div>
-              <div className="tile is-parent">
-                <article className="tile is-child notification is-danger">
-                  <p className="title mb-3">Last tile</p>
-                  <hr className="my-2" />
-                  <p className="subtitle">Sample Text</p>
+                  <br/><br/>
+                  <p className="subtitle">
+                    Then you just follow the rest of the steps which are very straightforward, they provide you the link and your web app is up and running!
+                  </p>
                 </article>
               </div>
             </div>

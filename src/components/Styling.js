@@ -11,6 +11,10 @@ class Styling extends Component {
       <div>
         <h1>Styling Page (How to make a website look great!)</h1>
         <p>Talk about we used Bulma and fontawesome and how using css libraries is not only a great way to make websites look good but also speed up that process of styling websites</p>
+        <p>
+          One of the best ways to make a website look great is by making use of a CSS library. The most popular CSS library is Bootstrap but for this website we decided
+          to make use of a different, pure CSS libary called BULMA.
+        </p>
       </div>
     );
   }

@@ -19,6 +19,10 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons'
 
+import { 
+  faGithubAlt
+} from '@fortawesome/free-brands-svg-icons'
+
 // Add new components here 
 
 import {
@@ -58,6 +62,7 @@ function Routers() {
           </div>
           <div className="navbar-end">
             
+          <a className="navbar-item mr-1 has-text-weight-semibold" href="https://github.com/tiago-a-ribeiro/my-app" target="_blank"><FontAwesomeIcon className="is-size-5" icon={faGithubAlt} />&nbsp;Github</a>
           </div>
         </div>
       </nav>

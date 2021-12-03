@@ -105,12 +105,17 @@ class Finance extends Component {
     
     render() {
       return (
-        <div> 
-          <h1 class="p-2 is-size-3 has-text-weight-bold">Finance Page</h1>
-          <h3>&thinsp; This page uses an API to automatically update daily to reflect the richest 400 people on Earth. You can find many interesting facts throughout the table and choose to sort some of the columns if you'd like!</h3>
-          <div class="table-container p-5">
-          <MyComponent apiData = {this.state.data}/>
-          </div>
+        <div>
+          <div className="block px-3 py-3">
+            <div className="box">
+              <h1 className="is-size-3 has-text-weight-semibold"> Finance </h1>
+              <hr className="my-3"></hr>
+              <h3>&thinsp; This page uses an API to automatically update daily to reflect the richest 400 people on Earth. You can find many interesting facts throughout the table and choose to sort some of the columns if you'd like!</h3>
+              <div class="table-container p-5">
+                <MyComponent apiData = {this.state.data}/>
+              </div>
+            </div>
+          </div> 
         </div>
       );
     } 

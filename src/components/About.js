@@ -5,10 +5,8 @@ class About extends Component {
     return (
       <div className="block px-3 py-3">
         <div className="box">
-          <div className = "title">
-            <h1 className="is-size-4 has-text-weight-semibold"> About </h1>
+            <h1 className="is-size-3 has-text-weight-semibold"> About </h1>
             <hr className="my-3"></hr>
-          </div>
           <div className = "tile is-ancestor py-3">
             <div className = "tile is-4 is-vertical">
               <div className = "tile is-child box">

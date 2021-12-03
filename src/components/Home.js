@@ -19,9 +19,8 @@ class Home extends Component {
     return (
       <div className="block px-3 py-3">
         <div className="box">
-          <div className = "title">
-          <h1>Home Page</h1>
-          </div>
+            <h1 className="is-size-3 has-text-weight-semibold"> Home </h1>
+            <hr className="my-3"></hr>
           <p> The front-end program we’ve chosen to use for this project is React. React is an open-source Javascript library,
             and one of the most downloaded front-ends in the industry.
           </p>

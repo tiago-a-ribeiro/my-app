@@ -10,8 +10,9 @@ class Review extends Component {
     return (
       <div className="block px-3 py-3">
         <div className="box">
+        <h1 className="is-size-3 has-text-weight-semibold"> Review </h1>
+        <hr className="my-3"></hr>
           <div className = "title">
-          <h1>Review</h1>
           </div>
           <p> 
             Here is our team members' review of our selected back and front ends.

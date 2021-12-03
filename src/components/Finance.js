@@ -72,10 +72,10 @@ function MyComponent(props) {
       image:(<img src={props.apiData[i].person.squareImage} width="120" height="120"></img>),
       rank:(props.apiData[i].rank),
       name:(props.apiData[i].person.name),
-      netWorth:((props.apiData[i].finalWorth*1000000).toLocaleString()),
-      yesterdayWorth:((props.apiData[i].estWorthPrev*1000000).toLocaleString()),
+      netWorth:("$" + (props.apiData[i].finalWorth*1000000).toLocaleString()),
+      yesterdayWorth:("$" + (props.apiData[i].estWorthPrev*1000000).toLocaleString()),
       change:(<NetWorthChange final={props.apiData[i].finalWorth} prev={props.apiData[i].estWorthPrev}/>),
-      privateWorth:((props.apiData[i].privateAssetsWorth*1000000).toLocaleString()),
+      privateWorth:("$" + (props.apiData[i].privateAssetsWorth*1000000).toLocaleString()),
       source:(props.apiData[i].source),
       country:(props.apiData[i].countryOfCitizenship)
     };

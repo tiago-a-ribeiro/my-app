@@ -14,30 +14,6 @@ function NetWorthChange(props) {
   return <td class={colorTag}>${difference.toLocaleString()}</td>;
 }
 
-//function netWorthString(props) {
-  //const netWorth = (props.finalWorth*1000000);
-  //return <td class={netWorth.toLocaleString()} </td>;
-//}
-
-
-
-function sortTableByColumn(table, column, asc = true){
-  const dirModifier = asc ? 1 : -1;
-  const tBody = table.tBodies[0];
-  const rows = Array.from(tBody.querySelectorAll("tr"));
-
-  const sortedRow = rows.sort((a,b) => {
-    const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
-    const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
-    
-    console.log(aColText);
-    console.log(bColText);
-    
-    //console.log(a);
-    //console.log(b);
-  });
-}
-
 const columns = [
   {
     name: '',
@@ -93,13 +69,11 @@ function MyComponent(props) {
   for (let i = 0; i < props.apiData.length; i++) {
     var person = {
       id:(i+1), 
-      image:(<img src={props.apiData[i].person.squareImage} width="150" height="150"></img>),
+      image:(<img src={props.apiData[i].person.squareImage} width="120" height="120"></img>),
       rank:(props.apiData[i].rank),
       name:(props.apiData[i].person.name),
       netWorth:((props.apiData[i].finalWorth*1000000).toLocaleString()),
-      //netWorth:(props.apiData[i].finalWorth*1000000),
       yesterdayWorth:((props.apiData[i].estWorthPrev*1000000).toLocaleString()),
-      //yesterdayWorth:(props.apiData[i].estWorthPrev*1000000),
       change:(<NetWorthChange final={props.apiData[i].finalWorth} prev={props.apiData[i].estWorthPrev}/>),
       privateWorth:((props.apiData[i].privateAssetsWorth*1000000).toLocaleString()),
       source:(props.apiData[i].source),
@@ -115,8 +89,6 @@ function MyComponent(props) {
   );
 };
 
-
-//sortTableByColumn(document.querySelector("table"), 1);
 
 class Finance extends Component {
 

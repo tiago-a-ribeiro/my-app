@@ -19,7 +19,7 @@ class Review extends Component {
           <article class = "media px-3 py-6">
             <figure class = "media-left">
               <p class = "image is-128x128">
-                <img src = "https://cdn.discordapp.com/attachments/885919712498810880/916147536341925978/IMG_20211202_210235_000.jpg"/>
+                <img src = "https://cdn.discordapp.com/attachments/885919712498810880/916147536341925978/IMG_20211202_210235_000.jpg" style={{width:128,height:170}}/>
               </p>
             </figure>
             <div class = "media-content">
@@ -39,7 +39,7 @@ class Review extends Component {
           <article class = "media px-3 py-6">
             <figure class = "media-left">
               <p class = "image is-128x128">
-                <img src = "https://cdn.discordapp.com/attachments/885919712498810880/916146240754941952/37740339_1848457898546973_8007523647839272960_n.jpeg"/>
+                <img src = "https://cdn.discordapp.com/attachments/885919712498810880/916146240754941952/37740339_1848457898546973_8007523647839272960_n.jpeg" style={{width:128,height:170}}/>
               </p>
             </figure>
             <div class = "media-content">
@@ -60,7 +60,7 @@ class Review extends Component {
           <article class = "media px-3 py-6">
             <figure class = "media-left">
               <p class = "image is-128x128">
-                <img src = "https://cdn.discordapp.com/attachments/440661911009492994/916182241594458142/image0.png"/>
+                <img src = "https://cdn.discordapp.com/attachments/440661911009492994/916182241594458142/image0.png" style={{width:128,height:170}}/>
               </p>
             </figure>
             <div class = "media-content">

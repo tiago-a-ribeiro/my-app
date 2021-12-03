@@ -14,7 +14,10 @@ function NetWorthChange(props) {
   return <td class={colorTag}>${difference.toLocaleString()}</td>;
 }
 
-
+//function netWorthString(props) {
+  //const netWorth = (props.finalWorth*1000000);
+  //return <td class={netWorth.toLocaleString()} </td>;
+//}
 
 
 
@@ -54,22 +57,22 @@ const columns = [
   {
     name: 'Live Net Worth',
     selector: row => row.netWorth,
-    sortable: true,
+    //sortable: true,
 },
 {
   name: 'Previous Day Net Worth',
   selector: row => row.yesterdayWorth,
-  sortable: true,
+  //sortable: true,
 },
 {
   name: 'Change Compared to Previous Day',
   selector: row => row.change,
-  sortable: true,
+  //sortable: true,
 },
 {
   name: 'Private Assets Worth',
   selector: row => row.privateWorth,
-  sortable: true,
+  //sortable: true,
 },
 {
   name: 'Source',
@@ -90,11 +93,13 @@ function MyComponent(props) {
   for (let i = 0; i < props.apiData.length; i++) {
     var person = {
       id:(i+1), 
-      image:(<img src={props.apiData[i].person.squareImage}></img>),
+      image:(<img src={props.apiData[i].person.squareImage} width="150" height="150"></img>),
       rank:(props.apiData[i].rank),
       name:(props.apiData[i].person.name),
       netWorth:((props.apiData[i].finalWorth*1000000).toLocaleString()),
+      //netWorth:(props.apiData[i].finalWorth*1000000),
       yesterdayWorth:((props.apiData[i].estWorthPrev*1000000).toLocaleString()),
+      //yesterdayWorth:(props.apiData[i].estWorthPrev*1000000),
       change:(<NetWorthChange final={props.apiData[i].finalWorth} prev={props.apiData[i].estWorthPrev}/>),
       privateWorth:((props.apiData[i].privateAssetsWorth*1000000).toLocaleString()),
       source:(props.apiData[i].source),
@@ -125,10 +130,11 @@ class Finance extends Component {
       const res = await axios.get(`https://forbes400.herokuapp.com/api/forbes400/`);
       this.setState({ data: res.data });
     }
-
+    
     render() {
       return (
         <div>
+          
           <h1 class="p-2 is-size-3 has-text-weight-bold">Finance Page</h1>
           <div class="table-container p-5">
           <MyComponent apiData = {this.state.data}/>
@@ -144,7 +150,6 @@ class Finance extends Component {
                   <th>Private Assets Worth</th>
                   <th>Source</th>
                   <th>Country of Residence</th>
-                  
                 </tr>
               </thead>
               <tbody>
@@ -166,9 +171,7 @@ class Finance extends Component {
           </div>
         </div>
       );
-      //sortTableByColumn(document.querySelector("table"), 1);
-    }
-    //sortTableByColumn(document.querySelector("table"), 1);
+    } 
 }
-//sortTableByColumn(document.querySelector("table"), 1);
 export default Finance;
+

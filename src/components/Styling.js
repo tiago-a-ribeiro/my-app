@@ -90,8 +90,8 @@ class Styling extends Component {
               <div class="column is-6">
                 <p class="subtitle">
                   Another great way of making a website look good is by using animations. React is awesome as many
-                  packages have been created to easily add animations to your website. In this case we are using the <b>"react-animations"</b> package. 
-                  Is allows you to wrap 
+                  packages have been created to easily add animations to your website. In this case we are using the <b>"react-animations"</b> package,
+                  it allows you to wrap elements into animation div objects and every element in it gets the animation, very easy and fun to use!
                 </p>
               </div>
             </div>

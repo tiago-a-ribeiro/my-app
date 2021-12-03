@@ -110,20 +110,6 @@ class Finance extends Component {
           <h1 class="p-2 is-size-3 has-text-weight-bold">Finance Page</h1>
           <div class="table-container p-5">
           <MyComponent apiData = {this.state.data}/>
-            <table class="table is-hoverable table-sortable"> 
-              <thead class="has-background-light">
-                <tr>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.data.map(data => 
-                  <tr>
-                    
-                  </tr>
-                )}
-              </tbody>
-            </table>
           </div>
         </div>
       );
